@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background: #fff;
+  color: #272727; }
+
+a {
+  text-decoration: underline;
+  color: #0060bf; }
+  a:hover {
+    text-decoration: none;
+    opacity: .8; }

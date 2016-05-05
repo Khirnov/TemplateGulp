@@ -1,0 +1,26 @@
+@import "settings";
+@import "mixins";
+
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	background: #fff;
+	color: #272727;
+}
+
+a {
+	text-decoration: underline;
+	color: #0060bf;
+
+	&:hover {
+		text-decoration: none;
+		opacity: .8;
+	}
+}

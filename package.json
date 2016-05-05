@@ -1,0 +1,14 @@
+{
+	"name": "project",
+	"version": "1.0.0",
+	"dependencies": {
+		"browser-sync": "*",
+		"gulp": "*",
+		"gulp-plumber": "*",
+		"gulp-autoprefixer": "*",
+		"gulp-rigger": "*",
+		"gulp-sass": "*",
+		"gulp-watch": "*",
+		"rimraf": "*"
+	}
+}

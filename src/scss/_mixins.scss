@@ -1,0 +1,138 @@
+@import "settings";
+
+@mixin clearfix {
+
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin null {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	list-style: none;
+	box-shadow: none;
+	position: static;
+	clip: auto;
+	width: auto;
+	height: auto;
+}
+
+@mixin null-block {
+	@include null;
+	display: block;
+	float: none;
+}
+
+@mixin null-inline-block {
+	@include null;
+	display: inline-block;
+	vertical-align: top;
+}
+
+@mixin null-list {
+	@include null-block;
+
+	& > * {
+		@include null-block;
+	}
+}
+
+@mixin null-inline-list {
+	@include null-block;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	letter-spacing: -1px !important;
+
+	& > * {
+		@include null-inline-block;
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		letter-spacing: 0;
+	}
+}
+
+@mixin null-grid {
+	@include null-block;
+	display: table;
+	width: 100%;
+	font-size: 0 !important;
+	line-height: 0 !important;
+	letter-spacing: -1px !important;
+
+	& > * {
+		@include null-inline-block;
+		vertical-align: top;
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		letter-spacing: 0;
+	}
+}
+
+@mixin null-pseudo {
+	@include null-block;
+	content: "";
+	position: absolute;
+}
+
+@mixin null-inline-pseudo {
+	@include null-inline-block;
+	content: "";
+}
+
+@mixin img-replace {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	direction: ltr;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+	font-size: 1px;
+	white-space: nowrap;
+}
+
+@mixin vertical-align {
+
+	&:before {
+		@include null-inline-pseudo;
+		vertical-align: middle;
+		height: 100%;
+		width: .1px;
+	}
+}
+
+@mixin visual-hide {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+@mixin placeholder {
+
+	&:-moz-placeholder {
+		@content
+	}
+
+	&::-moz-placeholder {
+		@content
+	}
+
+	&:-ms-input-placeholder {
+		@content
+	}
+
+	&::-webkit-input-placeholder {
+		@content
+	}
+}

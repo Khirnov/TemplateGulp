@@ -1,0 +1,12 @@
+{
+	"name": "project",
+	"version": "1.0.0",
+	"moduleType": [
+		"globals"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"normalize.css": "*",
+		"jquery": "2.*"
+	}
+}
