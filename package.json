@@ -3,9 +3,9 @@
 	"version": "1.0.0",
 	"dependencies": {
 		"browser-sync": "*",
-		"gulp": "*",
-		"gulp-plumber": "*",
+		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "*",
+		"gulp-plumber": "*",
 		"gulp-rigger": "*",
 		"gulp-sass": "*",
 		"gulp-watch": "*",
